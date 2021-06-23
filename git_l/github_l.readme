@@ -3,5 +3,27 @@ Git 并不像 SVN 那样有个中心服务器。
 比如github服务器，公司代码库。
 
 通过ssh(secure shell)与远程仓库建立连接。
-ssh-keygen -t rsa -C "2456806242@qq.com"
+ssh-keygen -t rsa -C "xxx@qq.com" -f ~/.ssh/id_rsa.renhuihui 
 
+命令执行成功后， 在~/ 下生成 .ssh 文件夹，打开 id_rsa.pub，复制里面的 key。
+在远程仓库的账号设置中添加ssh key。
+
+git init 
+git config --global user.email
+git config --global user.name
+
+git remote add origin https://github.com/rhh2019/work_learn.git'
+
+# 向远程仓库提交代码，将你的branch推送到 远程仓库origin的master分支上
+git push -u origin master
+
+# 查看远程仓库 
+git remote 
+# -v 参数可以看到每个别名的实际url
+git remote -v 
+
+# 从远程仓库下载新分支和数据
+git fetch origin master，从名为 origin 的远程上拉取名为 master 的分支到本地分支 origin/master
+
+# 从远程仓库提取数据并尝试合并到当前分支
+# git merge origin/master
