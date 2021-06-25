@@ -1,0 +1,2 @@
+Linux 系统中很多 shell，包括bash，sh，zsh，dash 和 korn 等，不管哪种 shell 都会有一个 .bashrc 的隐藏文件，它就相当于 shell 的配置文件。
+vim ~/.bashrc # 配置shell
